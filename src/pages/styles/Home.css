@@ -1,0 +1,139 @@
+.home__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1200px;
+  padding-top: 25px;
+  margin: 0 auto;
+}
+
+.home__form-search {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.home__form-input{
+  height: 45px;
+  outline: 0;
+  border: 1px solid var(--light-gray);
+  padding: 5px 14px;
+  width: 80%;
+  transition: border 200ms ease;
+}
+
+.home__form-input::placeholder {
+  opacity: 0.4;
+}
+
+.home__form-input:focus {
+  border: 1px solid var(--primary);
+}
+
+.home__form-btn {
+  height: 45px;
+  width: 45px;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 18px;
+}
+
+.home__form-btn:hover {
+  background-color: #e92c2c;
+  color: #e2e2e2;
+}
+
+.home__filterCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: min(250px, 100%);
+  margin: 0 auto;
+}
+
+.filter__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: min(100%, 250px);
+  cursor: pointer;
+}
+
+.home__filterCategory-title {
+  font-size: 22px;
+}
+
+.filter__header i {
+  font-size: 24px;
+  transition: all .5s ease;
+}
+
+.filter__header i:hover {
+  color: #e92c2c;
+}
+
+.home__categoryList {
+  display: flex;
+  max-height: 0;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  transition: max-height .6s ease;
+}
+
+.show {
+  max-height: 800px;
+}
+
+.filter__icon.show {
+  display: block;
+  transform: rotate(180deg);
+  transition: all .5s ease;
+}
+
+.categoryList__element {
+  padding:5px 0;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.categoryList__element:hover {
+  color: #e92c2c;
+}
+
+.home__listProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  justify-content: center;
+  grid-template-rows: auto;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+  .home__filterCategory{
+    width: 100%;
+  }
+
+  .home__categoryList{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .categoryList__element {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 0 0;
+  }
+}
